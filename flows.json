@@ -1,0 +1,600 @@
+[
+    {
+        "id": "830b2c165aef391c",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5b15ab25d9f56791",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#1f1f1f",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#1f1f1f",
+                "baseFont": "Impact,Impact,Charcoal,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#1f1f1f",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#1f1f1f",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#454545",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#1f1f1f",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Roxo",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "efe69ce77c48a505",
+        "type": "ui_tab",
+        "name": "Roxo",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "34671b6141be44d5",
+        "type": "ui_group",
+        "name": "Comunicação",
+        "tab": "efe69ce77c48a505",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "fe7342d9cd089ce3",
+        "type": "telegram bot",
+        "botname": "Roxo",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "updatemode": "polling",
+        "pollinterval": "300",
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": "6667",
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbotport": "8443",
+        "publicbotport": "8443",
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "8bf47bf797c1b13a",
+        "type": "ui_media",
+        "z": "830b2c165aef391c",
+        "group": "34671b6141be44d5",
+        "name": "",
+        "width": "0",
+        "height": "0",
+        "order": 1,
+        "category": "Interface",
+        "file": "90d1087eb716719ddda0a34141d797d0.png",
+        "layout": "center",
+        "showcontrols": true,
+        "loop": true,
+        "onstart": false,
+        "scope": "local",
+        "tooltip": "",
+        "x": 50,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "414dbbe7b55b73f9",
+        "type": "ui_microphone",
+        "z": "830b2c165aef391c",
+        "name": "",
+        "group": "34671b6141be44d5",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "maxLength": 5,
+        "maxRecogLength": "15",
+        "timeslice": 0,
+        "press": "click",
+        "mode": "recog",
+        "interimResults": false,
+        "x": 70,
+        "y": 160,
+        "wires": [
+            [
+                "513cdf67f6932478",
+                "f7c1fe5a25400b59"
+            ]
+        ]
+    },
+    {
+        "id": "513cdf67f6932478",
+        "type": "debug",
+        "z": "830b2c165aef391c",
+        "name": "MICROFONE",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 240,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "ef0016a636ef6044",
+        "type": "ui_audio",
+        "z": "830b2c165aef391c",
+        "name": "",
+        "group": "34671b6141be44d5",
+        "voice": "Google português do Brasil",
+        "always": "",
+        "x": 580,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "87f692802bc0cc33",
+        "type": "chatgpt",
+        "z": "830b2c165aef391c",
+        "name": "",
+        "API_KEY": "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",
+        "Organization": "org-gZVmHipfH5vzdb9EmSXXFnJL",
+        "x": 420,
+        "y": 160,
+        "wires": [
+            [
+                "ef0016a636ef6044",
+                "29cf56d215a73b0e"
+            ]
+        ]
+    },
+    {
+        "id": "f7c1fe5a25400b59",
+        "type": "change",
+        "z": "830b2c165aef391c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "turbo",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 250,
+        "y": 160,
+        "wires": [
+            [
+                "87f692802bc0cc33"
+            ]
+        ]
+    },
+    {
+        "id": "29cf56d215a73b0e",
+        "type": "debug",
+        "z": "830b2c165aef391c",
+        "name": "CHAT GPT",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "2cd136fc8d9c24d8",
+        "type": "telegram receiver",
+        "z": "830b2c165aef391c",
+        "name": "",
+        "bot": "fe7342d9cd089ce3",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "x": 110,
+        "y": 520,
+        "wires": [
+            [
+                "aae8f00cd52e775f",
+                "e58c0890a1f4cc4c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "b3d7420f0e50f380",
+        "type": "chatgpt",
+        "z": "830b2c165aef391c",
+        "name": "",
+        "API_KEY": "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",
+        "Organization": "org-gZVmHipfH5vzdb9EmSXXFnJL",
+        "x": 660,
+        "y": 460,
+        "wires": [
+            [
+                "da0508bf7415cf6e"
+            ]
+        ]
+    },
+    {
+        "id": "f17c27d7b318fbe3",
+        "type": "change",
+        "z": "830b2c165aef391c",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "telegram",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "telegram.content",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "turbo",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 460,
+        "wires": [
+            [
+                "b3d7420f0e50f380"
+            ]
+        ]
+    },
+    {
+        "id": "da0508bf7415cf6e",
+        "type": "change",
+        "z": "830b2c165aef391c",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "telegram.content",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "telegram",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 820,
+        "y": 460,
+        "wires": [
+            [
+                "64473b1fb282c7d8"
+            ]
+        ]
+    },
+    {
+        "id": "64473b1fb282c7d8",
+        "type": "telegram sender",
+        "z": "830b2c165aef391c",
+        "name": "",
+        "bot": "fe7342d9cd089ce3",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1010,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aae8f00cd52e775f",
+        "type": "debug",
+        "z": "830b2c165aef391c",
+        "name": "MENSAGEM",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 110,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "e58c0890a1f4cc4c",
+        "type": "switch",
+        "z": "830b2c165aef391c",
+        "name": "",
+        "property": "payload.type",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "message",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "voice",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 310,
+        "y": 520,
+        "wires": [
+            [
+                "f17c27d7b318fbe3"
+            ],
+            [
+                "8f1503d715d02cab"
+            ]
+        ]
+    },
+    {
+        "id": "8f1503d715d02cab",
+        "type": "change",
+        "z": "830b2c165aef391c",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "telegram",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "telegram.weblink",
+                "pt": "msg",
+                "to": "url",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "turbo",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 580,
+        "wires": [
+            [
+                "d7407bfc421b6414"
+            ]
+        ]
+    },
+    {
+        "id": "d7407bfc421b6414",
+        "type": "http request",
+        "z": "830b2c165aef391c",
+        "name": "",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 670,
+        "y": 580,
+        "wires": [
+            [
+                "dc6c9e5d5ae72186"
+            ]
+        ]
+    },
+    {
+        "id": "dc6c9e5d5ae72186",
+        "type": "watson-speech-to-text",
+        "z": "830b2c165aef391c",
+        "name": "",
+        "alternatives": 1,
+        "speakerlabels": true,
+        "smartformatting": false,
+        "lang": "pt-BR",
+        "langhidden": "pt-BR",
+        "langcustom": "NoCustomisationSetting",
+        "langcustomhidden": "",
+        "custom-weight": "0.5",
+        "band": "NarrowbandModel",
+        "bandhidden": "NarrowbandModel",
+        "keywords": "",
+        "keywords-threshold": "0.5",
+        "word-confidence": false,
+        "password": "",
+        "apikey": "QjCRCrtus9aclWMzNqbdZ7FKgvKGsP4yJNSGfpadNPde",
+        "payload-response": true,
+        "streaming-mode": false,
+        "streaming-mute": true,
+        "auto-connect": false,
+        "discard-listening": false,
+        "disable-precheck": false,
+        "service-endpoint": "https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/3500ad36-0632-438c-bfd8-54392ea65cd0",
+        "x": 840,
+        "y": 580,
+        "wires": [
+            [
+                "3c667d452c8ee0ad"
+            ]
+        ]
+    },
+    {
+        "id": "3c667d452c8ee0ad",
+        "type": "chatgpt",
+        "z": "830b2c165aef391c",
+        "name": "",
+        "API_KEY": "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",
+        "Organization": "org-gZVmHipfH5vzdb9EmSXXFnJL",
+        "x": 1000,
+        "y": 580,
+        "wires": [
+            [
+                "10eed16bfaf9bc93"
+            ]
+        ]
+    },
+    {
+        "id": "10eed16bfaf9bc93",
+        "type": "watson-text-to-speech",
+        "z": "830b2c165aef391c",
+        "name": "",
+        "lang": "",
+        "langhidden": "",
+        "langcustom": "NoCustomisationSetting",
+        "langcustomhidden": "NoCustomisationSetting",
+        "voice": "",
+        "voicehidden": "",
+        "format": "audio/ogg; codecs=opus",
+        "password": "",
+        "apikey": "PZQ1U7UK42_Gd0fhVtW1-R6Ny87JZfse8DpHzlcc3Uu1",
+        "payload-response": true,
+        "service-endpoint": "https://api.us-south.text-to-speech.watson.cloud.ibm.com/instances/d898105f-bca7-407f-afb8-a53b695e5e4c",
+        "x": 1160,
+        "y": 580,
+        "wires": [
+            [
+                "da0508bf7415cf6e"
+            ]
+        ]
+    }
+]
